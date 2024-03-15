@@ -3,9 +3,12 @@ import people from '/images/People.svg'
 
 
 
+
 const Header = () => {
     return (
         <header>
+
+          {/* Navbar Start */}
             <div className="navbar bg-base-100 font-lexend">
   <div className="navbar-start">
     <div className="dropdown">
@@ -39,13 +42,6 @@ const Header = () => {
   </div>
   <div className="navbar-end">
 
-  {/* <div class="form-control hidden lg:block">
-      <input type="text" placeholder=" Search" className="input input-bordered rounded-[50px] bg-[#150b2b0d] w-24 md:w-auto" />
-
-      <button class="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </button>
-    </div> */}
 
 
 <div className='hidden lg:block'>
@@ -70,6 +66,31 @@ const Header = () => {
       </div>
   </div>
 </div>
+
+
+{/* Navbar End */}
+
+{/* Hero area start */}
+
+<section className="container mx-auto">
+<div className="hero min-h-screen rounded-3xl"  style={{
+        backgroundImage: 'url("https://img.freepik.com/premium-photo/distinguished-chef-bustling-kitchen-orchestrating-symphony-culinary-creations_154823-203.jpg?w=740")'}}>
+  <div className="hero-overlay bg-[#150b2be6]-to-b from-[#150b2b00]to-[#150b2be6]  rounded-3xl"></div>
+
+  <div className="hero-content  text-center text-neutral-content">
+    <div className="lg:max-w-[70%]">
+      <h1 className="mb-5 text-2xl lg:text-5xl  font-bold text-white">Discover an exceptional cooking class tailored for you!.</h1>
+      <p className="mb-5">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
+      
+      <button className="btn bg-[#0BE58A] outline-none">Explore Now</button>
+      <button className="btn bg-transparent ml-6 text-white">Our Feedback</button>
+    </div>
+  </div>
+</div>
+</section>
+
+
+{/* Hero area end */}
         </header>
     );
 };
