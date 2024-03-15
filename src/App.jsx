@@ -1,19 +1,15 @@
 
-import './App.css'
+import React from 'react';
+import Header from './Components/Header/Header';
 
-function App() {
- 
 
+const App = () => {
   return (
-    <>
-     
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-      
-      
-    </>
-  )
-}
+    <div>
+      <Header></Header>
+    
+    </div>
+  );
+};
 
-export default App
+export default App;
