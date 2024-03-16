@@ -1,9 +1,10 @@
 
 import { GoClock } from "react-icons/go";
 import cook from '/images/cooking.png';
+import PropTypes from 'prop-types';
 const Recepie = ({recepie , handleWantCook}) => {
 
-    const {recipe_id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recepie;
+    const { recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recepie;
 
     return (
         <div>
@@ -24,7 +25,7 @@ const Recepie = ({recepie , handleWantCook}) => {
    
 
     {
-        ingredients.map(ingredient => <li className="text-[#878787] fira-sans">{ingredient}</li>)
+        ingredients.map(ingredient => <li key={recepie.recipe_id} className="text-[#878787] fira-sans">{ingredient}</li>)
     }
     
 </ul>
@@ -53,5 +54,8 @@ const Recepie = ({recepie , handleWantCook}) => {
         </div>
     );
 };
-
+Recepie.propTypes = {
+    recepie: PropTypes.array,
+    handleWantCook: PropTypes.func
+}
 export default Recepie;

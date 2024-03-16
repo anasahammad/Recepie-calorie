@@ -1,8 +1,8 @@
 
-
+import PropTypes from 'prop-types';
 import Cook from "./Cook";
 import Recepie from "./Recepie";
-const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) => {
+const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking}) => {
  
  
     return (
@@ -20,7 +20,7 @@ const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) 
             </div>
            
 
-           <div className="my-10 flex justify-between flex-col-reverse lg:flex-row ">
+           <div className="my-10 flex justify-between flex-col lg:flex-row ">
            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:w-[58%]">
             {/* -----------------Left------------------- */}
            
@@ -32,7 +32,7 @@ const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) 
 </div>
             {/* -----------------------Right------------------- */}
             <div className="border outline-1 rounded-2xl lg:w-[40%]">
-           <Cook total={total} cooking={cooking} handlePrepare={handlePrepare} cook={cooks}></Cook>
+           <Cook  cooking={cooking} handlePrepare={handlePrepare} cook={cooks}></Cook>
 
 </div>
            </div>
@@ -43,5 +43,13 @@ const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) 
        </main>
     );
 };
+Main.propTypes = {
+  handleWantCook: PropTypes.func,
+  handlePrepare: PropTypes.func,
+  recepies: PropTypes.array,
+  cooks: PropTypes.array,
+  cooking: PropTypes.array
 
+
+}
 export default Main;

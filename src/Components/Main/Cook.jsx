@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types';
 import 'react-toastify/dist/ReactToastify.css';
 const Cook = ({cook, handlePrepare, cooking}) => {
    
@@ -108,4 +109,11 @@ const Cook = ({cook, handlePrepare, cooking}) => {
     );
 };
 
+Cook.propTypes = {
+  cook: PropTypes.array,
+  handlePrepare: PropTypes.func,
+  cooking: PropTypes.array
+
+
+}
 export default Cook;

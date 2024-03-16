@@ -1,9 +1,6 @@
 
 import people from '/images/People.svg'
 
-
-
-
 const Header = () => {
     return (
         <header className='lexend'>
