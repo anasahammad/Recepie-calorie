@@ -2,7 +2,7 @@
 
 import Cook from "./Cook";
 import Recepie from "./Recepie";
-const Main = ({recepies}) => {
+const Main = ({recepies, handleWantCook, cooks}) => {
  
  
     return (
@@ -26,13 +26,13 @@ const Main = ({recepies}) => {
            
 
               {
-                recepies.map(recepie =>  <Recepie  recepie={recepie}> </Recepie>)
+                recepies.map(recepie =>  <Recepie  recepie={recepie} handleWantCook={handleWantCook}> </Recepie>)
               }
            
 </div>
             {/* -----------------------Right------------------- */}
             <div className="border outline-1 rounded-2xl lg:w-[40%]">
-           <Cook></Cook>
+           <Cook cook={cooks}></Cook>
 
 </div>
            </div>

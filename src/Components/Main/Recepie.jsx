@@ -1,7 +1,7 @@
 
 import { GoClock } from "react-icons/go";
 import cook from '/images/cooking.png';
-const Recepie = ({recepie}) => {
+const Recepie = ({recepie , handleWantCook}) => {
 
     const {recipe_id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = recepie;
 
@@ -43,7 +43,7 @@ const Recepie = ({recepie}) => {
     </div>
 </div>
 <div className="card-actions">
-  <button className="btn bg-[#73fec4] outline-none rounded-[50px]">Want to Cook</button>
+  <button onClick={()=>handleWantCook(recepie)} className="btn bg-[#73fec4] outline-none rounded-[50px]">Want to Cook</button>
 </div>
 </div>
 </div>
