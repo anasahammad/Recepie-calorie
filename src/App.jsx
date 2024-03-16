@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
-import Recepie from './Components/Main/Recepie';
 
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
 
@@ -29,11 +31,11 @@ const App = () => {
     if(!isAdded){
       const newCook = [...cooks, recepie]
       setCooks(newCook)
+     toast.success("Recepie successfully added!")
    
     }else{
-      alert("Item is already added");
-      return;
-  
+      toast.error("Sory it was already added")
+      
     }
     
   }
@@ -44,6 +46,8 @@ const App = () => {
     
     const newCooking = [...cooking, item]
     setCooking(newCooking);
+    const remainingCook = cooks.filter(cook => cook.recipe_id !== item.recipe_id);
+    setCooks(remainingCook)
 
  
   }
@@ -53,7 +57,7 @@ const App = () => {
     
       <Main  cooking={cooking}  handlePrepare={handlePrepare} cooks={cooks} handleWantCook={handleWantCook} recepies={recepies}></Main>
      
-
+    <ToastContainer></ToastContainer>
       
     
     </div>

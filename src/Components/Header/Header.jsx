@@ -79,8 +79,8 @@ const Header = () => {
 
   <div className="hero-content  text-center text-neutral-content">
     <div className="lg:max-w-[70%]">
-      <h1 className="mb-5 text-2xl lg:text-5xl  font-bold text-white">Discover an exceptional cooking class tailored for you!.</h1>
-      <p className="mb-5">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
+      <h1 className="mb-5 text-2xl lg:text-5xl  font-bold text-white">Delight Your Taste Buds with Calorie Conscious Recipes</h1>
+      <p className="mb-5">Welcome to our Recipe Calories website, where taste meets health! Explore our collection of mouthwatering recipes, carefully curated with calorie information to help you make delicious and nutritious choices for every meal.</p>
       
       <button className="btn bg-[#0BE58A] outline-none">Explore Now</button>
       <button className="btn bg-transparent ml-6 text-white">Our Feedback</button>

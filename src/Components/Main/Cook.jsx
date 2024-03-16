@@ -1,6 +1,6 @@
 
-
-const Cook = ({cook, handlePrepare, cooking, total}) => {
+import 'react-toastify/dist/ReactToastify.css';
+const Cook = ({cook, handlePrepare, cooking}) => {
    
    
     return (
@@ -12,7 +12,7 @@ const Cook = ({cook, handlePrepare, cooking, total}) => {
             <div className="lg:overflow-x-auto ">
 
                 
-  <table className="table table-zebra ">
+  <table className="table w-full table-zebra ">
    {/* head */}
 
    
@@ -61,7 +61,7 @@ const Cook = ({cook, handlePrepare, cooking, total}) => {
     </thead>
 
     {
-        cooking.map((item, index) => <tbody>
+        cooking.map((item, index) => <tbody key={item.recipe_id}>
  <tr>
         <th>{index + 1}</th>
         <td>{item.recipe_name}</td>
@@ -76,25 +76,29 @@ const Cook = ({cook, handlePrepare, cooking, total}) => {
      
   </table>
 
-<div>
-    
-</div>
-{
-    cooking.map(item =>  <div  className="flex justify-end gap-5 mr-8 mt-10">
-    <h6 className="text-[#282828cc] font-bold">Total Time = <br />
+
+
+     <div  className="flex justify-end items-right gap-3 mr-8 mt-10">
+        <div className="">
+        <h6 className="text-[#282828cc] font-bold">Total Time = <br /> <span>
     {
         cooking.reduce((prev, item)=> prev + item.preparing_time, 0)
-    }    minutes</h6>
-    <h6 className="text-[#282828cc] font-bold">Total Calories = <br />
+    } </span>   minutes</h6>
+        </div>
+   
+   <div className="">
+   <h6 className="text-[#282828cc] font-bold">Total Calories =  <br /> <span>
 {
     cooking.reduce((prev, item)=>{
         const caloreis = parseInt(item.calories.split(' ')[0]);
         return prev + caloreis;
-    }, 0  )
-}
+    }, 0  ) 
+} </span>  caloreis
 </h6>
-    </div>)
-}
+   </div>
+   
+    </div>
+
     
 
   

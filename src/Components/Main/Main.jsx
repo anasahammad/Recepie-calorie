@@ -16,7 +16,7 @@ const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) 
             Our Recipes
             </h1>
 
-            <p className="  text-[#150b2b99] ">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </p>
+            <p className="  text-[#150b2b99] ">Experience Culinary Excellence with Our Recipes. Explore a World of Flavorful Delights. Indulge in Unforgettable Dining Experiences. </p>
             </div>
            
 
@@ -26,7 +26,7 @@ const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) 
            
 
               {
-                recepies.map(recepie =>  <Recepie  recepie={recepie} handleWantCook={handleWantCook}> </Recepie>)
+                recepies.map(recepie =>  <Recepie key={recepie.recepie_id}  recepie={recepie} handleWantCook={handleWantCook}> </Recepie>)
               }
            
 </div>
