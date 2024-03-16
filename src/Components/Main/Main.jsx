@@ -2,7 +2,7 @@
 
 import Cook from "./Cook";
 import Recepie from "./Recepie";
-const Main = ({recepies, handleWantCook, cooks}) => {
+const Main = ({recepies, handleWantCook, cooks, handlePrepare, cooking, total}) => {
  
  
     return (
@@ -32,7 +32,7 @@ const Main = ({recepies, handleWantCook, cooks}) => {
 </div>
             {/* -----------------------Right------------------- */}
             <div className="border outline-1 rounded-2xl lg:w-[40%]">
-           <Cook cook={cooks}></Cook>
+           <Cook total={total} cooking={cooking} handlePrepare={handlePrepare} cook={cooks}></Cook>
 
 </div>
            </div>

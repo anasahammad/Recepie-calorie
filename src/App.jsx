@@ -10,6 +10,10 @@ const App = () => {
   const [recepies, setRecepies] = useState([]);
 
   const [cooks, setCooks] = useState([]);
+
+  const [cooking, setCooking] = useState([])
+
+ 
   useEffect(()=>{
     fetch('recepi.json')
     .then(res => res.json())
@@ -33,11 +37,21 @@ const App = () => {
     }
     
   }
+
+
+  const handlePrepare = (item)=>{
+    console.log("clicked", item);
+    
+    const newCooking = [...cooking, item]
+    setCooking(newCooking);
+
+ 
+  }
   return (
     <div>
       <Header></Header>
     
-      <Main cooks={cooks} handleWantCook={handleWantCook} recepies={recepies}></Main>
+      <Main  cooking={cooking}  handlePrepare={handlePrepare} cooks={cooks} handleWantCook={handleWantCook} recepies={recepies}></Main>
      
 
       
